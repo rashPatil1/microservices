@@ -31,3 +31,16 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore unwanted files across all directories under section2
+/section2/*/.gitignore
+/section2/*/.gitattributes
+/section2/*/pom.xml~
+/section2/*/accounts.iml~
+/section2/*/cards.iml~
+/section2/*/loans.iml
+
+
+/section2/accounts/pom.xml~
+/section2/cards/cards.iml~
+/section2/loans/pom.xml~
