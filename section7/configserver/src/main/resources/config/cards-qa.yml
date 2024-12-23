@@ -1,0 +1,14 @@
+
+
+build:
+  version: "2.0"
+
+
+cards:
+  message: "Welcome to EazyBank cards related QA APIs "
+  contactDetails:
+    name: "Raj joe - Developer"
+    email: "raj@eazybank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (222) 523-8624
