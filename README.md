@@ -27,3 +27,11 @@ This project is based on the original implementation by EazyBytes.
     - Git repository
   - Integrates the Config Server with all microservices.
   - Updates Docker Compose to include Spring Cloud Config Server for different profiles.
+ 
+### Section 7
+- **Description**: Replacing h2 with mysql db for each microservice .
+
+### Section 8
+- **Description**: Client side Service Discovery (service registration), load balancing using Eureka, openFeign.
+  - Demonstrates incorpating these above changes by starting the microservices (accounts, cards, loans), configserver,eurekaserver manually.
+  - Also Demonstrates incorpating these above changes by starting all (accounts, cards, loans), configserver,eurekaserver in the form of containers using Docker compose.
