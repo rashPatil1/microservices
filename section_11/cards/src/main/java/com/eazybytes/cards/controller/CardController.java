@@ -109,8 +109,9 @@ public class CardController {
     @RequestHeader("eazybank-correlation-id") String correlationId,
     @RequestParam @Valid
     @Pattern( regexp = "(^[0-9]{10}$)", message = "Mobile number must be 10 digits")    String mobileNumber){
-        logger.debug("eazybank-correlation-id found: {}", correlationId);
+        logger.debug("fetchCardDetails() start");
         CardDto cardDto = cardService.fetchCardDetails(mobileNumber);
+        logger.debug("fetchCardDetails() end");
         return ResponseEntity.status(HttpStatus.OK).body(cardDto);
     }
 
