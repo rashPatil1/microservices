@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: eurekaserver
+    config:
+      import: "optional:configserver:http://localhost:8071"
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    metrics:
+      tags:
+        application: ${spring.application.name}
+
+    health:
+      readiness:
+        enabled: true
+      liveness:
+        enabled: true
+
+    endpoint:
+      health:
+        probes:
+          enabled: true
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
