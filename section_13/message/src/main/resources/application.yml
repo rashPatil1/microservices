@@ -1,0 +1,23 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: message
+  cloud:
+    function:
+      definition: email|sms
+    stream:
+      bindings:
+        emailsms-in-0: #It binds the application to a queue or exchange from which it will receive message
+          destination: send-communication #This defines the name of the exchange (or topic) in RabbitMQ that this binding listens to.
+          group: ${spring.application.name}
+        emailsms-out-0: #It binds the application to a queue or exchange to which it will send message
+          destination: communication-sent #This defines the name of the exchange (or topic) in RabbitMQ that this binding sends messages to.
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 10s

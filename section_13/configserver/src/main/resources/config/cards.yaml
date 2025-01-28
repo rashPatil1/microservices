@@ -1,0 +1,11 @@
+build:
+    version: "3.0"
+
+cards:
+    message: "Welcome to EazyBank cards related local APIs "
+    contactDetails:
+        name: "Sona Doe - Developer"
+        email: "sona@eazybank.com"
+    onCallSupport:
+        - (555) 836-1234
+        - (555) 32424-1345
